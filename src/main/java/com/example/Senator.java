@@ -1,10 +1,13 @@
 package com.example;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Senator {
+    @SerializedName("startDate")
+    private String startdate;
     private String name;
     private String gender;
     private String birthday;
-    private String startdate;
     private String state;
 
     public Senator() {

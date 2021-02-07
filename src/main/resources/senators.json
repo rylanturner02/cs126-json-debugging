@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "limit": 100,
+    "offset": 0,
+    "total_count": 100
+  },
   "objects": [
     {
       "caucus": null,
