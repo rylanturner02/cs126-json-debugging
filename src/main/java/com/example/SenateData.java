@@ -9,7 +9,7 @@ public class SenateData {
         senators = newSenators;
     }
 
-    public List<Senator> getSenators() {
-        return senators;
+    public Senator getSenator(int senatorIndex) {
+        return senators.get(senatorIndex);
     }
 }
