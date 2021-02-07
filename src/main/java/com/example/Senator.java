@@ -9,13 +9,13 @@ public class Senator {
     private final String startDate;
     private final String party;
     private final String state;
-    private final List<PersonalInfo> personals;
+    private final PersonalInfo personalInfo;
 
-    public Senator(String newStartDate, String newParty, String newState, List<PersonalInfo> newPersonals) {
+    public Senator(String newStartDate, String newParty, String newState, PersonalInfo newPersonalInfo) {
         startDate = newStartDate;
         party = newParty;
         state = newState;
-        personals = newPersonals;
+        personalInfo = newPersonalInfo;
     }
 
     public String getStartDate() {
@@ -30,7 +30,7 @@ public class Senator {
         return state;
     }
 
-    public List<PersonalInfo> getPersonals() {
-        return personals;
+    public PersonalInfo getPersonalInfo() {
+        return personalInfo;
     }
 }

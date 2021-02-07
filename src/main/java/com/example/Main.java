@@ -13,6 +13,6 @@ public class Main {
         Reader jsonReader = Files.newBufferedReader(Paths.get("src/main/resources/senators.json"));
         SenateData senateData = gson.fromJson(jsonReader, SenateData.class);
 
-        System.out.println(senateData.getSenator(98).getParty());
+        System.out.println(senateData.getSenator(98).getPersonalInfo());
     }
 }

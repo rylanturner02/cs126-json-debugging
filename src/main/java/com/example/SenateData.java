@@ -23,10 +23,6 @@ public class SenateData {
         return senators;
     }
 
-    public void setSenators(ArrayList<Senator> newSenators) {
-        senators = newSenators;
-    }
-
     public Meta getMeta() {
         return meta;
     }
