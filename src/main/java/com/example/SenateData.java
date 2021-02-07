@@ -2,12 +2,11 @@ package com.example;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SenateData {
     @SerializedName("objects")
-    private List<Senator> senators;
+    private final List<Senator> senators;
 
     public SenateData(List<Senator> newSenators) {
         senators = newSenators;
