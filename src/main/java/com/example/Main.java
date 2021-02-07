@@ -14,5 +14,7 @@ public class Main {
         Gson gson = new Gson();
         Reader jsonReader = Files.newBufferedReader(Paths.get("senators.json"));
         SenateData senateData = gson.fromJson(jsonReader, SenateData.class);
+
+        System.out.println(senateData.getSenator(0).getState());
     }
 }
