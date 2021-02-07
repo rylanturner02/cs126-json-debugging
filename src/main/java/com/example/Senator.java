@@ -2,14 +2,13 @@ package com.example;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 public class Senator {
+    @SerializedName("person")
+    private final PersonalInfo personalInfo;
     @SerializedName("startdate")
     private final String startDate;
     private final String party;
     private final String state;
-    private final PersonalInfo personalInfo;
 
     public Senator(String newStartDate, String newParty, String newState, PersonalInfo newPersonalInfo) {
         startDate = newStartDate;
