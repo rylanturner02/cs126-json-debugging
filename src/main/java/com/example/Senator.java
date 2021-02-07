@@ -3,15 +3,19 @@ package com.example;
 import com.google.gson.annotations.SerializedName;
 
 public class Senator {
-    @SerializedName("startDate")
-    private String startdate;
-    private String name;
-    private String gender;
-    private String birthday;
-    private String state;
+    @SerializedName("startdate")
+    private final String startDate;
+    private final String name;
+    private final String gender;
+    private final String birthday;
+    private final String state;
 
-    public Senator() {
-
+    public Senator(String newStartDate, String newName, String newGender, String newBirthday, String newState) {
+        startDate = newStartDate;
+        name = newName;
+        gender = newGender;
+        birthday = newBirthday;
+        state = newState;
     }
 
     public String getName() {
@@ -26,8 +30,8 @@ public class Senator {
         return birthday;
     }
 
-    public String getStartdate() {
-        return startdate;
+    public String getStartDate() {
+        return startDate;
     }
 
     public String getState() {

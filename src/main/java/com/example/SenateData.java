@@ -1,15 +1,33 @@
 package com.example;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class SenateData {
-    private final List<Senator> senators;
+    @SerializedName("objects")
+    private List<Senator> senators;
+    private final Meta meta;
 
-    public SenateData(List<Senator> newSenators) {
+    public SenateData(Meta newMeta, List<Senator> newSenators) {
+        meta = newMeta;
         senators = newSenators;
     }
 
     public Senator getSenator(int senatorIndex) {
         return senators.get(senatorIndex);
+    }
+
+    public List<Senator> getSenators() {
+        return senators;
+    }
+
+    public void setSenators(ArrayList<Senator> newSenators) {
+        senators = newSenators;
+    }
+
+    public Meta getMeta() {
+        return meta;
     }
 }
