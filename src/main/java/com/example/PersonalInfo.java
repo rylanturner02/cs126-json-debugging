@@ -1,11 +1,11 @@
 package com.example;
 
-public class Person {
+public class PersonalInfo {
     private final String name;
     private final String gender;
     private final String birthday;
 
-    public Person(String newName, String newGender, String newBirthday) {
+    public PersonalInfo(String newName, String newGender, String newBirthday) {
         name = newName;
         gender = newGender;
         birthday = newBirthday;
