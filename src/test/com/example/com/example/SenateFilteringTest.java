@@ -15,6 +15,7 @@ import static org.junit.Assert.assertTrue;
 
 public class SenateFilteringTest {
     private SenateFiltering senateFilter;
+    private final int END_OF_YEAR_SUBSTRING = 4;
 
     /**
      * Sets up senateData exactly like in Main.java and instantiates senateFiltering.
@@ -96,7 +97,7 @@ public class SenateFilteringTest {
 
         // Checks for at least one instance of senator in list born before the given year.
         for (Senator senator : senateFilter.filterByBirthYearFloor(1960)) {
-            if (Integer.parseInt(senator.getPersonalInfo().getBirthday().substring(0,5)) < 1960) {
+            if (Integer.parseInt(senator.getPersonalInfo().getBirthday().substring(0, END_OF_YEAR_SUBSTRING)) < 1960) {
                 isListWithSenatorsBornOnOrAfterBirthYear = false;
                 break;
             }
@@ -138,7 +139,7 @@ public class SenateFilteringTest {
 
         // Checks for at least one instance of senator in list who started their term before the given year.
         for (Senator senator : senateFilter.filterByStartYearFloor(2000)) {
-            if (Integer.parseInt(senator.getStartDate().substring(0,5)) < 2000) {
+            if (Integer.parseInt(senator.getStartDate().substring(0, END_OF_YEAR_SUBSTRING)) < 2000) {
                 isListWithSenatorsStartingOnOrAfterStartYear = false;
                 break;
             }
