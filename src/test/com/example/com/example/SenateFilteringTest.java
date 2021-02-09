@@ -148,22 +148,7 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForTooHighStartDateFloor() {
-
-    }
-
-    @Test
-    public void testFilteringForInvalidStartDateFloorPass() {
-
-    }
-
-    @Test
-    public void testFilteringForEmptyStringStartDateFloor() {
-
-    }
-
-    @Test
-    public void testFilteringForNullStartDateFloor() {
-
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByStartYearFloor(3000));
     }
 
     // ...
