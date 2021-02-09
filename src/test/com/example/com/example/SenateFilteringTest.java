@@ -9,14 +9,20 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SenateFilteringTest {
     private Gson gson;
     private SenateData senateData;
     private SenateFiltering senateFilter;
 
+    /**
+     * Sets up senateData exactly like in Main.java and instantiates senateFiltering.
+     * @throws IOException for Files.newBufferedReader().
+     */
     @Before
     public void setUp() throws IOException {
         gson = new Gson();
@@ -25,7 +31,7 @@ public class SenateFilteringTest {
         senateFilter = new SenateFiltering(senateData);
     }
 
-    /**
+    /*
      * The following section of tests evaluate the filterByParty method in SenateFiltering.java.
      * 1. If a valid party name is passed, the returned List is checked for only containing the given party.
      * 2. Any invalid party passed should return an IllegalArgumentException.
@@ -35,10 +41,10 @@ public class SenateFilteringTest {
      * @param party A valid party that a senator could be registered under.
      * @return isMatchToGivenParty True if returned List only contains passed party and False otherwise.
      */
-    public boolean isListOfGivenParty(String party) {
+    public boolean isListOfGivenParty(List<Senator> filteredSenators, String party) {
         boolean isMatchToGivenParty = true;
 
-        for (Senator senator : senateFilter.filterByParty(party)) {
+        for (Senator senator : filteredSenators) {
             if (!(senator.getParty().equals(party))) {
                 isMatchToGivenParty = false;
                 break;
@@ -50,37 +56,32 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForDemocratPass() {
-        assertEquals(isListOfGivenParty("Democrat"), senateFilter.filterByParty("Democrat"));
+        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Democrat"), "Democrat"));
     }
 
     @Test
     public void testFilteringForRepublicanPass() {
-        assertEquals(isListOfGivenParty("Republican"), senateFilter.filterByParty("Republican"));
+        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Republican"), "Republican"));
     }
 
     @Test
     public void testFilteringForIndependentPass() {
-        assertEquals(isListOfGivenParty("Independent"), senateFilter.filterByParty("Independent"));
+        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Independent"), "Independent"));
     }
 
     @Test
     public void testFilteringForInvalidPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByparty("Bull-moose"));
-    }
-
-    @Test
-    public void testFilteringForNonStringPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByparty("Bull-moose"));
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty("Bull-moose"));
     }
 
     @Test
     public void testFilteringForEmptyStringPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByparty(""));
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty(""));
     }
 
     @Test
     public void testFilteringForNullPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByparty(null));
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty(null));
     }
 
     // ...
