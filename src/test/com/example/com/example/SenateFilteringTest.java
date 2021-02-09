@@ -118,7 +118,12 @@ public class SenateFilteringTest {
         assertEquals(new IllegalArgumentException(), senateFilter.filterByBirthYearFloor(3000));
     }
 
-    // ...
+    /*
+     * The following section of tests evaluate the filterAfterBirthYear method in SenateFiltering.java.
+     * 1. If a valid party name is passed, the returned List is checked for only containing senators born
+     * on or after the passed birth year.
+     * 2. Any invalid birth year passed should return an IllegalArgumentException.
+     */
 
     @Test
     public void testFilteringForValidStartDateFloor() {

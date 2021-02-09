@@ -13,7 +13,15 @@ public class SenateFiltering {
         return senateData.getSenators();
     }
 
-    public List<Senator> filterByBirthYearFloor(int i) {
+    public List<Senator> filterByBirthYearFloor(int birthYearFloor) {
+        return senateData.getSenators();
+    }
+
+    public List<Senator> filterByStartYearFloor(int startYearFloor) {
+        return senateData.getSenators();
+    }
+
+    public List<Senator> filterByState(String stateInitials) {
         return senateData.getSenators();
     }
 }
