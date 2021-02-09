@@ -127,13 +127,23 @@ public class SenateFilteringTest {
     /*
      * The following section of tests evaluate the filterByStartYearFloor method in SenateFiltering.java.
      * 1. If a valid party name is passed, the returned List is checked for only containing senators who
-     * started their term on or before the passed year.
+     * started their congressional term on or before the passed year.
      * 2. Any invalid start year passed should return an IllegalArgumentException.
      */
 
     @Test
     public void testFilteringForValidStartDateFloor() {
+        boolean isListWithSenatorsStartingOnOrAfterStartYear = true;
 
+        // Checks for at least one instance of senator in list who started their term before the given year.
+        for (Senator senator : senateFilter.filterByStartYearFloor(2000)) {
+            if (Integer.parseInt(senator.getStartDate().substring(0,5)) < 2000) {
+                isListWithSenatorsStartingOnOrAfterStartYear = false;
+                break;
+            }
+        }
+
+        assertTrue(isListWithSenatorsStartingOnOrAfterStartYear);
     }
 
     @Test
