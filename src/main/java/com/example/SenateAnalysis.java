@@ -26,7 +26,29 @@ public class SenateAnalysis {
         int classIFrequency = 0, classIIFrequency = 0, classIIIFrequency = 0;
 
         for (Senator senator : senateData.getSenators()) {
-            if (senator.getClass)
+            switch (senator.getSenatorClass()) {
+                case "class1":
+                    classIFrequency++;
+                    break;
+                case "class2":
+                    classIIFrequency++;
+                    break;
+                case "class3":
+                    classIIIFrequency++;
+                    break;
+                default:
+                    throw new IllegalArgumentException();
+            }
+        }
+
+        if (classIFrequency > classIIFrequency && classIFrequency > classIIIFrequency) {
+            return "Class I";
+        } else if (classIIFrequency > classIFrequency && classIIFrequency > classIIIFrequency) {
+            return "Class II";
+        } else if (classIIIFrequency > classIFrequency && classIIIFrequency > classIIFrequency) {
+            return "Class III";
+        } else {
+            return "No most frequent class.";
         }
     }
 }

@@ -139,7 +139,7 @@ public class SenateFilteringTest {
 
         // Checks for at least one instance of senator in list who started their term before the given year.
         for (Senator senator : senateFilter.filterByStartYearFloor(2000)) {
-            if (Integer.parseInt(senator.getStartDate().substring(0, END_OF_YEAR_SUBSTRING)) < 2000) {
+            if (Integer.parseInt(senator.getSenatorClass().substring(0, END_OF_YEAR_SUBSTRING)) < 2000) {
                 isListWithSenatorsStartingOnOrAfterStartYear = false;
                 break;
             }
