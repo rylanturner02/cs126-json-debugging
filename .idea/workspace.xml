@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Added filterByParty method in SenateFiltering.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectId" id="1o1MWrYLQpYGG0yj7STguOfb6uX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/com/example" />
+    <property name="last_opened_file_path" value="D:/rylan/chicago_crime.json" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Main" />
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit" type="JUnit" factoryName="JUnit">
+      <module name="JSON" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.JSONTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.JUnit" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="" />
+      <created>1612449685503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612449685503</updated>
+      <workItem from="1612449686806" duration="2204000" />
+      <workItem from="1612632738548" duration="1231000" />
+      <workItem from="1612639266901" duration="7901000" />
+      <workItem from="1612654133389" duration="12839000" />
+      <workItem from="1612719684641" duration="305000" />
+      <workItem from="1612724703358" duration="1316000" />
+      <workItem from="1612799320180" duration="10739000" />
+    </task>
+    <task id="LOCAL-00001" summary="Created ChicagoCrimeData file and initialized JSON.">
+      <created>1612642297108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612642297108</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added parameters to ChicagoCrimeData">
+      <created>1612643698014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612643698014</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created ChicagoCrimeData constructor.">
+      <created>1612644008096</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612644008096</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added getters for all instance variables in CrimeInfo.">
+      <created>1612647217915</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612647217915</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created wrapper class ChicagoCrimeIndex for CrimeInfo.">
+      <created>1612647299368</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612647299368</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added constructor and getCrime method to ChicagoCrimeIndex.">
+      <created>1612647705594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612647705594</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created SenateData.java and Senator.java.">
+      <created>1612655130951</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612655130951</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added constructor and getSenators method to SenateData.">
+      <created>1612655683701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612655683701</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added constructors and getters to Senator.java.">
+      <created>1612656291666</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612656291666</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changed getSenators to getSenator.">
+      <created>1612656437998</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612656437998</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Imported senators.json for development purposes.">
+      <created>1612657809651</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612657809651</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added serialized name for startdate.">
+      <created>1612658650012</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612658650012</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added TypeToken reading to Main class.">
+      <created>1612670607089</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612670607089</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added class for nested Person object in objects array of senators.json.">
+      <created>1612712706608</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612712706608</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Initialized and added getter for list of personal info.">
+      <created>1612712939892</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612712939892</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changed PersonalInfo storage from List to PersonalInfo object.">
+      <created>1612713138260</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1612713138260</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added @SerializedName for PersonalInfo functionality.">
+      <created>1612713272256</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1612713272256</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Removed Meta.java now that testing purposes are passed.">
+      <created>1612713509960</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612713509960</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Removed unused imports and finalized instance variables.">
+      <created>1612713943911</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612713943911</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactored SenateInfoTest.java.">
+      <created>1612715141812</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612715141812</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added GSON object to SenateInfoTest.java">
+      <created>1612799509571</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1612799509571</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Created SenateAnalysis.java and SenateFiltering.java.">
+      <created>1612814359834</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612814359834</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added test names with general functionality for SenateFilteringTest.java.">
+      <created>1612857610482</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612857610482</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added test names with general functionality for SenateAnalysisTest.java.">
+      <created>1612857867793</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612857867793</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Wrote tests and corresponding Javadoc for filterByParty method in SenateFiltering.">
+      <created>1612890287422</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612890287422</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added parameters to ChicagoCrimeData" />
+    <MESSAGE value="Created ChicagoCrimeData constructor." />
+    <MESSAGE value="Added getters for all instance variables in CrimeInfo." />
+    <MESSAGE value="Created wrapper class ChicagoCrimeIndex for CrimeInfo." />
+    <MESSAGE value="Added constructor and getCrime method to ChicagoCrimeIndex." />
+    <MESSAGE value="Created SenateData.java and Senator.java." />
+    <MESSAGE value="Added constructor and getSenators method to SenateData." />
+    <MESSAGE value="Added constructors and getters to Senator.java." />
+    <MESSAGE value="Changed getSenators to getSenator." />
+    <MESSAGE value="Imported senators.json for development purposes." />
+    <MESSAGE value="Added serialized name for startdate." />
+    <MESSAGE value="Added TypeToken reading to Main class." />
+    <MESSAGE value="Added class for nested Person object in objects array of senators.json." />
+    <MESSAGE value="Initialized and added getter for list of personal info." />
+    <MESSAGE value="Changed PersonalInfo storage from List to PersonalInfo object." />
+    <MESSAGE value="Added @SerializedName for PersonalInfo functionality." />
+    <MESSAGE value="Removed Meta.java now that testing purposes are passed." />
+    <MESSAGE value="Removed unused imports and finalized instance variables." />
+    <MESSAGE value="Refactored SenateInfoTest.java." />
+    <MESSAGE value="Added GSON object to SenateInfoTest.java" />
+    <MESSAGE value="Created SenateAnalysis.java and SenateFiltering.java." />
+    <MESSAGE value="Added test names with general functionality for SenateFilteringTest.java." />
+    <MESSAGE value="Added test names with general functionality for SenateAnalysisTest.java." />
+    <MESSAGE value="Wrote tests and corresponding Javadoc for filterByParty method in SenateFiltering." />
+    <MESSAGE value="Added filterByParty method in SenateFiltering." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filterByParty method in SenateFiltering." />
+  </component>
+</project>

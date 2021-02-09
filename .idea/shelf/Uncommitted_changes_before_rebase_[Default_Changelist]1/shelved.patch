@@ -1,0 +1,28 @@
+Index: src/main/java/com/example/SenateFiltering.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/SenateFiltering.java b/src/main/java/com/example/SenateFiltering.java
+new file mode 100644
+--- /dev/null	(date 1612814271588)
++++ b/src/main/java/com/example/SenateFiltering.java	(date 1612814271588)
+@@ -0,0 +1,4 @@
++package com.example;
++
++public class SenateFiltering {
++}
+Index: src/main/java/com/example/SenateAnalysis.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/SenateAnalysis.java b/src/main/java/com/example/SenateAnalysis.java
+new file mode 100644
+--- /dev/null	(date 1612814271579)
++++ b/src/main/java/com/example/SenateAnalysis.java	(date 1612814271579)
+@@ -0,0 +1,4 @@
++package com.example;
++
++public class SenateAnalysis {
++}
