@@ -45,11 +45,11 @@ public class SenateAnalysisTest {
     }
 
     /**
-     * Test case examines accuracy of list produced by sortedNamesByStartDate method in SenateAnalysis.
+     * Test case examines accuracy of list produced by sortedNamesByBirthDate method in SenateAnalysis.
      */
     @Test
     public void testAnalysisForCorrectSortedListByBirthDate() {
-        List<Senator> sortedList = senateAnalysis.sortedNamesByStartDate();
+        List<Senator> sortedList = senateAnalysis.sortedNamesByBirthDate();
         boolean isOrderedByBirthDate = true;
 
         for (int i = 0; i < sortedList.size() - 1; i ++) {

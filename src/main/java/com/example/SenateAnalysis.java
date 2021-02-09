@@ -25,7 +25,7 @@ public class SenateAnalysis {
         return 1960;
     }
 
-    public List<Senator> sortedNamesByStartDate() {
+    public List<Senator> sortedNamesByBirthDate() {
         return senateData.getSenators();
     }
 
