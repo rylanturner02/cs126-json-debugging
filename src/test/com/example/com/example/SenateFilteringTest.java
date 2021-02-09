@@ -101,7 +101,16 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForSenatorBornAtBirthYearFloor() {
-        assertTrue(senateFilter.filterByBirthYearFloor(1987).contains("Sen. Jon Ossoff [D-GA]"));
+        boolean isListWithSenatorBornAtBirthYearFloor = false;
+
+        for (Senator senator : senateFilter.filterByBirthYearFloor(1987)) {
+            if (senator.getPersonalInfo().getName().equals("Sen. Jon Ossoff [D-GA]")) {
+                isListWithSenatorBornAtBirthYearFloor = true;
+                break;
+            }
+        }
+
+        assertTrue(isListWithSenatorBornAtBirthYearFloor);
     }
 
     @Test
