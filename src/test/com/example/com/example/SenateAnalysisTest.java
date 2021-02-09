@@ -41,7 +41,7 @@ public class SenateAnalysisTest {
      */
     @Test
     public void testAnalysisForCorrectAverageBirthYear() {
-        assertEquals(1956, senateAnalysis.averageStartYear());
+        assertEquals(1956, senateAnalysis.averageBirthYear());
     }
 
     /**
