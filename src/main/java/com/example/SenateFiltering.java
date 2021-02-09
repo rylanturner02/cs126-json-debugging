@@ -1,6 +1,5 @@
 package com.example;
 
-import java.util.Collection;
 import java.util.List;
 
 public class SenateFiltering {
@@ -11,10 +10,10 @@ public class SenateFiltering {
     }
 
     public List<Senator> filterByParty(String party) {
-
+        return senateData.getSenators();
     }
 
     public List<Senator> filterByBirthYearFloor(int i) {
-        
+        return senateData.getSenators();
     }
 }
