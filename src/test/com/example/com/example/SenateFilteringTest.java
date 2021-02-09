@@ -15,8 +15,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class SenateFilteringTest {
-    private Gson gson;
-    private SenateData senateData;
     private SenateFiltering senateFilter;
 
     /**
@@ -25,15 +23,16 @@ public class SenateFilteringTest {
      */
     @Before
     public void setUp() throws IOException {
-        gson = new Gson();
+        Gson gson = new Gson();
         Reader jsonReader = Files.newBufferedReader(Paths.get("src/main/resources/senators.json"));
-        senateData = gson.fromJson(jsonReader, SenateData.class);
+        SenateData senateData = gson.fromJson(jsonReader, SenateData.class);
         senateFilter = new SenateFiltering(senateData);
     }
 
     /*
      * The following section of tests evaluate the filterByParty method in SenateFiltering.java.
-     * 1. If a valid party name is passed, the returned List is checked for only containing the given party.
+     * 1. If a valid party name is passed, the returned List is checked for only containing senators
+     * of the given party.
      * 2. Any invalid party passed should return an IllegalArgumentException.
      */
 
@@ -41,7 +40,7 @@ public class SenateFilteringTest {
      * @param party A valid party that a senator could be registered under.
      * @return isMatchToGivenParty True if returned List only contains passed party and False otherwise.
      */
-    public boolean isListOfGivenParty(List<Senator> filteredSenators, String party) {
+    public boolean isListOfSenatorsOfGivenParty(List<Senator> filteredSenators, String party) {
         boolean isMatchToGivenParty = true;
 
         for (Senator senator : filteredSenators) {
@@ -56,17 +55,17 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForDemocratPass() {
-        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Democrat"), "Democrat"));
+        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Democrat"), "Democrat"));
     }
 
     @Test
     public void testFilteringForRepublicanPass() {
-        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Republican"), "Republican"));
+        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Republican"), "Republican"));
     }
 
     @Test
     public void testFilteringForIndependentPass() {
-        assertTrue(isListOfGivenParty(senateFilter.filterByParty("Independent"), "Independent"));
+        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Independent"), "Independent"));
     }
 
     @Test
@@ -84,9 +83,14 @@ public class SenateFilteringTest {
         assertEquals(new IllegalArgumentException(), senateFilter.filterByParty(null));
     }
 
-    // ...
+    /*
+     * The following section of tests evaluate the filterAfterBirthYear method in SenateFiltering.java.
+     * 1. If a valid party name is passed, the returned List is checked for only containing senators born
+     * after the passed birth year.
+     * 2. Any invalid birth year passed should return an IllegalArgumentException.
+     */
 
-    public boolean isListOfSenatorsAfterBirthYear(String birthYear) {
+    public boolean isListOfSenatorsAfterGivenBirthYear(String birthYear) {
         return true;
     }
 
