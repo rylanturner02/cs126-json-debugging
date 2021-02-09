@@ -174,42 +174,33 @@ public class SenateFilteringTest {
      * 2. Any invalid state name passed should return an IllegalArgumentException.
      */
 
-    public boolean isListOfSenatorsOfGivenState(String stateInitials) {
+    @Test
+    public void testFilteringForValidStatePass() {
         boolean isMatchToGivenState = true;
 
         // Checks to make sure all senators in the filtered list belong to the passed state.
-        for (Senator senator : senateFilter.filterByState(stateInitials)) {
-            if (!(senator.getParty().equals(stateInitials))) {
+        for (Senator senator : senateFilter.filterByState("IL")) {
+            if (!(senator.getState().equals("IL"))) {
                 isMatchToGivenState = false;
                 break;
             }
         }
 
-        return isMatchToGivenState;
-    }
-
-    @Test
-    public void testFilteringForValidStatePass() {
-
+        assertTrue(isMatchToGivenState);
     }
 
     @Test
     public void testFilteringForInvalidStatePass() {
-
-    }
-
-    @Test
-    public void testFilteringForNonStringStatePass() {
-
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByState("Quebec"));
     }
 
     @Test
     public void testFilteringForEmptyStatePass() {
-
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByState(""));
     }
 
     @Test
     public void testFilteringForNullStatePass() {
-
+        assertEquals(new IllegalArgumentException(), senateFilter.filterByState(null));
     }
 }
