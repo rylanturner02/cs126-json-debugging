@@ -9,6 +9,8 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static org.junit.Assert.assertEquals;
+
 public class SenateAnalysisTest {
     private SenateAnalysis senateAnalysis;
 
@@ -28,7 +30,7 @@ public class SenateAnalysisTest {
 
     @Test
     public void testAnalysisForCorrectAverageStartYear() {
-
+        assertEquals(1960, senateAnalysis.averageStartYear());
     }
 
     // ...
