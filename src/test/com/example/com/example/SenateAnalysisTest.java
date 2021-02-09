@@ -32,8 +32,8 @@ public class SenateAnalysisTest {
      * Test case examines accuracy of averageStartYear method in SenateAnalysis.
      */
     @Test
-    public void testAnalysisForCorrectAverageStartYear() {
-        assertEquals(2010, senateAnalysis.averageStartYear());
+    public void testAnalysisForCorrectMostFrequentClass() {
+        assertEquals("Class III", senateAnalysis.mostFrequentClass());
     }
 
     /**

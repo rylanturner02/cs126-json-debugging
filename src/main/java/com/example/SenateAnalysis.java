@@ -10,17 +10,6 @@ public class SenateAnalysis {
         senateData = newSenateData;
     }
 
-    public int averageStartYear() {
-        int sumOfStartYears = 0;
-
-        for (Senator senator : senateData.getSenators()) {
-            sumOfStartYears += Integer.parseInt(senator.getStartDate().substring(0, END_OF_YEAR_SUBSTRING));
-            System.out.print(senator.getStartDate().substring(0, END_OF_YEAR_SUBSTRING) + "+");
-        }
-
-        return sumOfStartYears / senateData.getSenators().size();
-    }
-
     public int averageBirthYear() {
         return 1960;
     }
@@ -31,5 +20,13 @@ public class SenateAnalysis {
 
     public String mostFrequentPartyByRank(String rank) {
         return "Democrat";
+    }
+
+    public String mostFrequentClass() {
+        int classIFrequency = 0, classIIFrequency = 0, classIIIFrequency = 0;
+
+        for (Senator senator : senateData.getSenators()) {
+            if (senator.getClass)
+        }
     }
 }
