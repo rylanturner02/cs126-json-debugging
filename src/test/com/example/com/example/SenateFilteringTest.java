@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -84,25 +83,32 @@ public class SenateFilteringTest {
     }
 
     /*
-     * The following section of tests evaluate the filterAfterBirthYear method in SenateFiltering.java.
+     * The following section of tests evaluate the filterByBirthYearFloor method in SenateFiltering.java.
      * 1. If a valid party name is passed, the returned List is checked for only containing senators born
-     * on or after the passed birth year.
+     * on or after the passed year.
      * 2. Any invalid birth year passed should return an IllegalArgumentException.
      */
 
-    public boolean isListOfSenatorsAfterGivenBirthYear(int birthYear) {
-        return true;
-    }
-
     @Test
     public void testFilteringForValidBirthYearFloor() {
-        assertTrue(isListOfSenatorsAfterGivenBirthYear(1960));
+        boolean isListWithSenatorsBornOnOrAfterBirthYear = true;
+
+        // Checks for at least one instance of senator in list born before the given year.
+        for (Senator senator : senateFilter.filterByBirthYearFloor(1960)) {
+            if (Integer.parseInt(senator.getPersonalInfo().getBirthday().substring(0,5)) < 1960) {
+                isListWithSenatorsBornOnOrAfterBirthYear = false;
+                break;
+            }
+        }
+
+        assertTrue(isListWithSenatorsBornOnOrAfterBirthYear);
     }
 
     @Test
     public void testFilteringForSenatorBornAtBirthYearFloor() {
         boolean isListWithSenatorBornAtBirthYearFloor = false;
 
+        // Checks for presence of Sen. Jon Ossoff, who was born during 1987.
         for (Senator senator : senateFilter.filterByBirthYearFloor(1987)) {
             if (senator.getPersonalInfo().getName().equals("Sen. Jon Ossoff [D-GA]")) {
                 isListWithSenatorBornAtBirthYearFloor = true;
@@ -119,10 +125,10 @@ public class SenateFilteringTest {
     }
 
     /*
-     * The following section of tests evaluate the filterAfterBirthYear method in SenateFiltering.java.
-     * 1. If a valid party name is passed, the returned List is checked for only containing senators born
-     * on or after the passed birth year.
-     * 2. Any invalid birth year passed should return an IllegalArgumentException.
+     * The following section of tests evaluate the filterByStartYearFloor method in SenateFiltering.java.
+     * 1. If a valid party name is passed, the returned List is checked for only containing senators who
+     * started their term on or before the passed year.
+     * 2. Any invalid start year passed should return an IllegalArgumentException.
      */
 
     @Test

@@ -3,7 +3,7 @@ package com.example;
 import java.util.List;
 
 public class SenateFiltering {
-    private SenateData senateData;
+    private final SenateData senateData;
 
     public SenateFiltering(SenateData newSenateData) {
         senateData = newSenateData;
