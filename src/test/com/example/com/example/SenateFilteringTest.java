@@ -42,6 +42,7 @@ public class SenateFilteringTest {
     public boolean isListOfSenatorsOfGivenParty(String party) {
         boolean isMatchToGivenParty = true;
 
+        // Checks to make sure all senators in the filtered list belong to the passed party.
         for (Senator senator : senateFilter.filterByParty(party)) {
             if (!(senator.getParty().equals(party))) {
                 isMatchToGivenParty = false;
@@ -166,7 +167,26 @@ public class SenateFilteringTest {
         assertEquals(new IllegalArgumentException(), senateFilter.filterByStartYearFloor(3000));
     }
 
-    // ...
+    /*
+     * The following section of tests evaluate the filterByState method in SenateFiltering.java.
+     * 1. If a valid party name is passed, the returned List is checked for only containing senators who
+     * belong to the given state.
+     * 2. Any invalid state name passed should return an IllegalArgumentException.
+     */
+
+    public boolean isListOfSenatorsOfGivenState(String stateInitials) {
+        boolean isMatchToGivenState = true;
+
+        // Checks to make sure all senators in the filtered list belong to the passed state.
+        for (Senator senator : senateFilter.filterByState(stateInitials)) {
+            if (!(senator.getParty().equals(stateInitials))) {
+                isMatchToGivenState = false;
+                break;
+            }
+        }
+
+        return isMatchToGivenState;
+    }
 
     @Test
     public void testFilteringForValidStatePass() {
