@@ -8,8 +8,10 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SenateAnalysisTest {
     private SenateAnalysis senateAnalysis;
@@ -26,36 +28,50 @@ public class SenateAnalysisTest {
         senateAnalysis = new SenateAnalysis(senateData);
     }
 
-    // ...
-
+    /**
+     * Test case examines accuracy of averageStartYear method in SenateAnalysis.
+     */
     @Test
     public void testAnalysisForCorrectAverageStartYear() {
-        assertEquals(1960, senateAnalysis.averageStartYear());
+        assertEquals(2010, senateAnalysis.averageStartYear());
     }
 
-    // ...
-
+    /**
+     * Test case examines accuracy of averageBirthYear method in SenateAnalysis.
+     */
     @Test
     public void testAnalysisForCorrectAverageBirthYear() {
-
+        assertEquals(1956, senateAnalysis.averageStartYear());
     }
 
-    // ...
-
+    /**
+     * Test case examines accuracy of list produced by sortedNamesByStartDate method in SenateAnalysis.
+     */
     @Test
     public void testAnalysisForCorrectSortedListByStartDate() {
+        List<Senator> sortedList = senateAnalysis.sortedNamesByStartDate();
+        boolean isOrderedByStartDate = true;
 
+        for (int i = 0; i < sortedList.size() - 1; i++) {
+            if (sortedList.get(i) != sortedList.get(i + 1)) {
+                isOrderedByStartDate = false;
+                break;
+            }
+        }
+
+        assertTrue(isOrderedByStartDate);
     }
 
-    // ...
-
+    /**
+     * Test case examines accuracy of party returned by mostFrequentPartyByRank method in SenateAnalysis.
+     */
     @Test
     public void testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank() {
-
+        assertEquals("Republican", senateAnalysis.mostFrequentPartyByRank("junior"));
     }
 
     @Test
     public void testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank() {
-
+        assertEquals("Democrat", senateAnalysis.mostFrequentPartyByRank("senior"));
     }
 }

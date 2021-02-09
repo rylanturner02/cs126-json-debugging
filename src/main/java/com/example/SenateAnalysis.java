@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SenateAnalysis {
     private SenateData senateData;
@@ -17,8 +18,8 @@ public class SenateAnalysis {
         return 1960;
     }
 
-    public ArrayList<String> sortedNamesByStartDate() {
-        return new ArrayList<>();
+    public List<Senator> sortedNamesByStartDate() {
+        return senateData.getSenators();
     }
 
     public String mostFrequentPartyByRank(String rank) {
