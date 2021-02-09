@@ -40,10 +40,10 @@ public class SenateFilteringTest {
      * @param party A valid party that a senator could be registered under.
      * @return isMatchToGivenParty True if returned List only contains passed party and False otherwise.
      */
-    public boolean isListOfSenatorsOfGivenParty(List<Senator> filteredSenators, String party) {
+    public boolean isListOfSenatorsOfGivenParty(String party) {
         boolean isMatchToGivenParty = true;
 
-        for (Senator senator : filteredSenators) {
+        for (Senator senator : senateFilter.filterByParty(party)) {
             if (!(senator.getParty().equals(party))) {
                 isMatchToGivenParty = false;
                 break;
@@ -55,17 +55,17 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForDemocratPass() {
-        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Democrat"), "Democrat"));
+        assertTrue(isListOfSenatorsOfGivenParty("Democrat"));
     }
 
     @Test
     public void testFilteringForRepublicanPass() {
-        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Republican"), "Republican"));
+        assertTrue(isListOfSenatorsOfGivenParty("Republican"));
     }
 
     @Test
     public void testFilteringForIndependentPass() {
-        assertTrue(isListOfSenatorsOfGivenParty(senateFilter.filterByParty("Independent"), "Independent"));
+        assertTrue(isListOfSenatorsOfGivenParty("Independent"));
     }
 
     @Test
@@ -90,13 +90,13 @@ public class SenateFilteringTest {
      * 2. Any invalid birth year passed should return an IllegalArgumentException.
      */
 
-    public boolean isListOfSenatorsAfterGivenBirthYear(String birthYear) {
+    public boolean isListOfSenatorsAfterGivenBirthYear(int birthYear) {
         return true;
     }
 
     @Test
     public void testFilteringForValidBirthYearFloor() {
-
+        assertTrue(isListOfSenatorsAfterGivenBirthYear(1960));
     }
 
     @Test
@@ -164,7 +164,7 @@ public class SenateFilteringTest {
     }
 
     @Test
-    public void testFileringForEmptyStatePass() {
+    public void testFilteringForEmptyStatePass() {
 
     }
 
