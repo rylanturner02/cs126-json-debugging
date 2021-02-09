@@ -147,6 +147,21 @@ public class SenateFilteringTest {
     }
 
     @Test
+    public void testFilteringForSenatorStaringAtStartYearFloor() {
+        boolean isListWithSenatorStartingAtStartYearFloor = false;
+
+        // Checks for presence of Sen. Jon Ossoff, who started his term in 2021.
+        for (Senator senator : senateFilter.filterByStartYearFloor(2021)) {
+            if (senator.getPersonalInfo().getName().equals("Sen. Jon Ossoff [D-GA]")) {
+                isListWithSenatorStartingAtStartYearFloor = true;
+                break;
+            }
+        }
+
+        assertTrue(isListWithSenatorStartingAtStartYearFloor);
+    }
+
+    @Test
     public void testFilteringForTooHighStartDateFloor() {
         assertEquals(new IllegalArgumentException(), senateFilter.filterByStartYearFloor(3000));
     }

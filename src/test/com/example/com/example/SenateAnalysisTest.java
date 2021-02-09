@@ -5,11 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SenateAnalysisTest {
-    private Gson gson;
 
     @Before
     public void setUp() {
-        gson = new Gson();
+        Gson gson = new Gson();
     }
 
     // ...
