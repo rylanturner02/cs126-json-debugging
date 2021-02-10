@@ -4,8 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class SenateAnalysis {
-    private SenateData senateData;
-    private final int END_OF_YEAR_SUBSTRING = 4;
+    private final SenateData senateData;
 
     public SenateAnalysis(SenateData newSenateData) {
         senateData = newSenateData;
@@ -15,6 +14,7 @@ public class SenateAnalysis {
         int totalSumOfBirthYears = 0;
 
         for (Senator senator : senateData.getSenators()) {
+            int END_OF_YEAR_SUBSTRING = 4;
             totalSumOfBirthYears += Integer.parseInt(senator.getPersonalInfo().getBirthday()
                     .substring(0, END_OF_YEAR_SUBSTRING));
         }

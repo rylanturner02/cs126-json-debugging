@@ -10,12 +10,10 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class SenateFilteringTest {
     private SenateFiltering senateFilter;
-    private final int END_OF_YEAR_SUBSTRING = 4;
 
     /**
      * Sets up senateData exactly like in Main.java and instantiates senateFiltering.
@@ -70,18 +68,18 @@ public class SenateFilteringTest {
     }
 
     @Test
-    public void testFilteringForInvalidPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty("Bull-moose"));
+    public void testFilteringForNonPresentPartyPass() {
+        assertNull(senateFilter.filterByParty("Bull-moose"));
     }
 
     @Test
     public void testFilteringForEmptyStringPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty(""));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByParty(""));
     }
 
     @Test
     public void testFilteringForNullPartyPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByParty(null));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByParty(null));
     }
 
     /*
@@ -97,6 +95,7 @@ public class SenateFilteringTest {
 
         // Checks for at least one instance of senator in list born before the given year.
         for (Senator senator : senateFilter.filterByBirthYearFloor(1960)) {
+            int END_OF_YEAR_SUBSTRING = 4;
             if (Integer.parseInt(senator.getPersonalInfo().getBirthday().substring(0, END_OF_YEAR_SUBSTRING)) < 1960) {
                 isListWithSenatorsBornOnOrAfterBirthYear = false;
                 break;
