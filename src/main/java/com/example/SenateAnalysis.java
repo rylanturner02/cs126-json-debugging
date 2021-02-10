@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SenateAnalysis {
@@ -22,7 +23,13 @@ public class SenateAnalysis {
     }
 
     public List<Senator> sortedNamesByBirthDate() {
-        return senateData.getSenators();
+        ArrayList<Senator> listOfBirthdays = new ArrayList<>();
+
+        for (Senator senator : senateData.getSenators()) {
+            listOfBirthdays.add(senator.getPersonalInfo().getBirthday());
+        }
+
+        return listOfBirthdays.sort(null);
     }
 
     public String mostFrequentPartyByRank(String rank) {

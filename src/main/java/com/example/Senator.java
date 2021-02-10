@@ -2,7 +2,7 @@ package com.example;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Senator {
+public class Senator implements Comparable {
     @SerializedName("person")
     private final PersonalInfo personalInfo;
     @SerializedName("senator_class")
@@ -39,5 +39,23 @@ public class Senator {
 
     public PersonalInfo getPersonalInfo() {
         return personalInfo;
+    }
+
+    public int numericizeBirthdayString(Senator senator) {
+        return Integer.parseInt(senator.getPersonalInfo().getBirthday().substring(0, 4)
+                + senator.getPersonalInfo().getBirthday().substring(5, 7)
+                + senator.getPersonalInfo().getBirthday().substring(8));
+    }
+
+    @Override
+    public int compareTo(Object comparedObject) {
+        if (!(comparedObject instanceof Senator)) {
+            throw new IllegalArgumentException();
+        }
+
+        int thisNumericizedBirthday = numericizeBirthdayString(this);
+        int otherNumericizedBirthday = numericizeBirthdayString((Senator) comparedObject);
+
+        return Integer.compare(thisNumericizedBirthday, otherNumericizedBirthday);
     }
 }
