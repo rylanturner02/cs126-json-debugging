@@ -13,6 +13,12 @@ public class SenateFiltering {
         senateData = newSenateData;
     }
 
+    /**
+     * Parses all parties from getParty to filter only the given party.
+     *
+     * @param party The given political party to filter for.
+     * @return A list of references for senators of only the given party.
+     */
     public List<Senator> filterByParty(String party) {
         int MINIMUM_STRING_LENGTH = 8;
 
@@ -35,6 +41,12 @@ public class SenateFiltering {
         return null;
     }
 
+    /**
+     * Parses all birthdays from getBirthday to filter only the given birth year.
+     *
+     * @param birthYearFloor The given minimum birth year to filter for.
+     * @return A list of references for senators born on or after the given year.
+     */
     public List<Senator> filterByBirthYearFloor(int birthYearFloor) {
         if (birthYearFloor > LATEST_YEAR_TO_BE_SENATOR) {
             throw new IllegalArgumentException();
@@ -58,6 +70,12 @@ public class SenateFiltering {
         return null;
     }
 
+    /**
+     * Parses all senate classes from getSenateClass to filter only the given class.
+     *
+     * @param senateClass The given senate class to filter for.
+     * @return A list of references for senators of only the given class.
+     */
     public List<Senator> filterBySenateClass(String senateClass) {
         String[] validClasses = new String[]{"class1", "class2", "class3"};
         List<String> validClassesList = Arrays.asList(validClasses);
@@ -81,6 +99,12 @@ public class SenateFiltering {
         return null;
     }
 
+    /**
+     * Parses all state initials from getState to filter only the given state.
+     *
+     * @param stateInitials The given state to filter for.
+     * @return A list of references for senators of only the given state.
+     */
     public List<Senator> filterByState(String stateInitials) {
         String[] validInitials = new String[]{"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
                 "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH",

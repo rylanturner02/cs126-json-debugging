@@ -12,10 +12,6 @@ public class SenateData {
         senators = newSenators;
     }
 
-    public Senator getSenator(int senatorIndex) {
-        return senators.get(senatorIndex);
-    }
-
     public List<Senator> getSenators() {
         return senators;
     }
