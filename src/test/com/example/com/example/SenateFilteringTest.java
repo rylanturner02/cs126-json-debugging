@@ -168,6 +168,9 @@ public class SenateFilteringTest {
         assertEquals(new IllegalArgumentException(), senateFilter.filterByStartYearFloor(3000));
     }
 
+    @Test
+    public void
+
     /*
      * The following section of tests evaluate the filterByState method in SenateFiltering.java.
      * 1. If a valid party name is passed, the returned List is checked for only containing senators who

@@ -17,7 +17,7 @@ public class SenateFiltering {
         return senateData.getSenators();
     }
 
-    public List<Senator> filterByStartYearFloor(int startYearFloor) {
+    public List<Senator> filterBySenateClass(String senateClass) {
         return senateData.getSenators();
     }
 
