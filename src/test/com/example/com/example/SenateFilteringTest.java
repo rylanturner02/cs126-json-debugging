@@ -122,7 +122,7 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForTooHighBirthYearFloor() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByBirthYearFloor(3000));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByBirthYearFloor(3000));
     }
 
     /*

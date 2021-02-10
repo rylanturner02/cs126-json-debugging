@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SenateFiltering {
+    private static final int LATEST_YEAR_TO_BE_SENATOR = 1991;
+    private static final int END_OF_YEAR_SUBSTRING = 4;
     private final SenateData senateData;
 
     public SenateFiltering(SenateData newSenateData) {
@@ -33,7 +35,26 @@ public class SenateFiltering {
     }
 
     public List<Senator> filterByBirthYearFloor(int birthYearFloor) {
-        return senateData.getSenators();
+        if (birthYearFloor > LATEST_YEAR_TO_BE_SENATOR) {
+            throw new IllegalArgumentException();
+        }
+
+        ArrayList<Senator> birthYearFilteredSenators = new ArrayList<>();
+
+        for (Senator senator : senateData.getSenators()) {
+            String birthdayString = senator.getPersonalInfo().getBirthday();
+            int birthYear = Integer.parseInt(birthdayString.substring(0, END_OF_YEAR_SUBSTRING));
+
+            if (birthYear >= birthYearFloor) {
+                birthYearFilteredSenators.add(senator);
+            }
+        }
+
+        if (birthYearFilteredSenators.size() > 0) {
+            return birthYearFilteredSenators;
+        }
+
+        return null;
     }
 
     public List<Senator> filterBySenateClass(String senateClass) {
