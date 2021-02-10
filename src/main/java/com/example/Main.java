@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) throws IOException {
         Gson gson = new Gson();
         Reader jsonReader = Files.newBufferedReader(Paths.get("src/main/resources/senators.json"));
@@ -28,6 +27,9 @@ public class Main {
         }
     }
 
+    /**
+     * Introduces user-input choices for showcasing analysis functions.
+     */
     public static void toAnalysisFunctions(SenateData senateData) {
         SenateAnalysis senateAnalysis = new SenateAnalysis(senateData);
 
@@ -57,6 +59,9 @@ public class Main {
         }
     }
 
+    /**
+     * Introduces user-input options for filtering functions.
+     */
     public static void toFilteringFunctions(SenateData senateData) {
         SenateFiltering senateFiltering = new SenateFiltering(senateData);
 

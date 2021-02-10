@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Implemented filterByState and passed all test cases.">
+    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Added functions to showcase SenateAnalysis and SenateFiltering in Main.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,14 +202,7 @@
       <workItem from="1612654133389" duration="12839000" />
       <workItem from="1612719684641" duration="305000" />
       <workItem from="1612724703358" duration="1316000" />
-      <workItem from="1612799320180" duration="40752000" />
-    </task>
-    <task id="LOCAL-00013" summary="Added TypeToken reading to Main class.">
-      <created>1612670607089</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1612670607089</updated>
+      <workItem from="1612799320180" duration="41306000" />
     </task>
     <task id="LOCAL-00014" summary="Added class for nested Person object in objects array of senators.json.">
       <created>1612712706608</created>
@@ -546,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612931280438</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Added functions to showcase SenateAnalysis and SenateFiltering in Main.">
+      <created>1612932980462</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1612932980462</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added edge test case for filterByStartYearFloor method in SenateFiltering." />
     <MESSAGE value="Added isListOfSenatorsOfGivenState method." />
     <MESSAGE value="Added all test cases for filterByState method in SenateFiltering." />
     <MESSAGE value="Added constructor with parameter in SenateAnalysis." />
@@ -591,6 +591,7 @@
     <MESSAGE value="Implemented filterByBirthYearFloor and passed all test cases." />
     <MESSAGE value="Implemented filterBySenateClass and passed all test cases." />
     <MESSAGE value="Implemented filterByState and passed all test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented filterByState and passed all test cases." />
+    <MESSAGE value="Added functions to showcase SenateAnalysis and SenateFiltering in Main." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functions to showcase SenateAnalysis and SenateFiltering in Main." />
   </component>
 </project>
