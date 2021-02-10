@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SenateFiltering {
@@ -58,13 +59,10 @@ public class SenateFiltering {
     }
 
     public List<Senator> filterBySenateClass(String senateClass) {
-        int MINIMUM_STRING_LENGTH = 6;
-        ArrayList<String> validClasses = new ArrayList<>();
-        validClasses.add("class1");
-        validClasses.add("class2");
-        validClasses.add("class3");
+        String[] validClasses = new String[]{"class1", "class2", "class3"};
+        List<String> validClassesList = Arrays.asList(validClasses);
 
-        if (senateClass == null || !(validClasses.contains(senateClass))) {
+        if (senateClass == null || !(validClassesList.contains(senateClass))) {
             throw new IllegalArgumentException();
         }
 
@@ -84,6 +82,28 @@ public class SenateFiltering {
     }
 
     public List<Senator> filterByState(String stateInitials) {
-        return senateData.getSenators();
+        String[] validInitials = new String[]{"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
+                "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH",
+                "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA",
+                "WA", "WV", "WI", "WY"};
+        List<String> validInitialsList = Arrays.asList(validInitials);
+
+        if (stateInitials == null || !(validInitialsList.contains(stateInitials))) {
+            throw new IllegalArgumentException();
+        }
+
+        ArrayList<Senator> stateFilteredSenators = new ArrayList<>();
+
+        for (Senator senator : senateData.getSenators()) {
+            if (senator.getState().equals(stateInitials)) {
+                stateFilteredSenators.add(senator);
+            }
+        }
+
+        if (stateFilteredSenators.size() > 0) {
+            return stateFilteredSenators;
+        }
+
+        return null;
     }
 }

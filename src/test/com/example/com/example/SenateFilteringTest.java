@@ -185,16 +185,16 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForInvalidStatePass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByState("Quebec"));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByState("DC"));
     }
 
     @Test
     public void testFilteringForEmptyStatePass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByState(""));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByState(""));
     }
 
     @Test
     public void testFilteringForNullStatePass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByState(null));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterByState(null));
     }
 }

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Implemented filterByBirthYearFloor and passed all test cases.">
+    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Implemented filterBySenateClass and passed all test cases.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +58,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="JUnit.SenateFilteringTest.testFilteringForNullPass">
+  <component name="RunManager" selected="JUnit.SenateFilteringTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -84,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateAnalysisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateFilteringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -93,13 +91,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateFilteringTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateFilteringTest.testFilteringForEmptyStringPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateFilteringTest.testFilteringForEmptyStatePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +107,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.SenateFilteringTest" />
-      <option name="METHOD_NAME" value="testFilteringForEmptyStringPass" />
+      <option name="METHOD_NAME" value="testFilteringForEmptyStatePass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateFilteringTest.testFilteringForInvalidClassPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateFilteringTest.testFilteringForInvalidStatePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.SenateFilteringTest" />
-      <option name="METHOD_NAME" value="testFilteringForInvalidClassPass" />
+      <option name="METHOD_NAME" value="testFilteringForInvalidStatePass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateFilteringTest.testFilteringForNullPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateFilteringTest.testFilteringForNullStatePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -141,13 +139,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.SenateFilteringTest" />
-      <option name="METHOD_NAME" value="testFilteringForNullPass" />
+      <option name="METHOD_NAME" value="testFilteringForNullStatePass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateFilteringTest.testFilteringForValidClassPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateFilteringTest.testFilteringForValidStatePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +155,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.SenateFilteringTest" />
-      <option name="METHOD_NAME" value="testFilteringForValidClassPass" />
+      <option name="METHOD_NAME" value="testFilteringForValidStatePass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,19 +163,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.JUnit" />
-      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForValidClassPass" />
-      <item itemvalue="JUnit.SenateAnalysisTest" />
-      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForInvalidClassPass" />
-      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForEmptyStringPass" />
-      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForNullPass" />
+      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForValidStatePass" />
+      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForInvalidStatePass" />
+      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForEmptyStatePass" />
+      <item itemvalue="JUnit.SenateFilteringTest.testFilteringForNullStatePass" />
+      <item itemvalue="JUnit.SenateFilteringTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForNullPass" />
-        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForEmptyStringPass" />
-        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForInvalidClassPass" />
-        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForValidClassPass" />
-        <item itemvalue="JUnit.SenateAnalysisTest" />
+        <item itemvalue="JUnit.SenateFilteringTest" />
+        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForNullStatePass" />
+        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForEmptyStatePass" />
+        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForInvalidStatePass" />
+        <item itemvalue="JUnit.SenateFilteringTest.testFilteringForValidStatePass" />
       </list>
     </recent_temporary>
   </component>
@@ -195,14 +193,7 @@
       <workItem from="1612654133389" duration="12839000" />
       <workItem from="1612719684641" duration="305000" />
       <workItem from="1612724703358" duration="1316000" />
-      <workItem from="1612799320180" duration="37991000" />
-    </task>
-    <task id="LOCAL-00011" summary="Imported senators.json for development purposes.">
-      <created>1612657809651</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1612657809651</updated>
+      <workItem from="1612799320180" duration="39154000" />
     </task>
     <task id="LOCAL-00012" summary="Added serialized name for startdate.">
       <created>1612658650012</created>
@@ -540,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612928999500</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Implemented filterBySenateClass and passed all test cases.">
+      <created>1612930151610</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1612930151610</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Wrote testFilteringForValidStartDateFloor test method." />
     <MESSAGE value="Wrote all test cases for filterByStartYearFloor method in SenateFiltering." />
     <MESSAGE value="Added edge test case for filterByStartYearFloor method in SenateFiltering." />
     <MESSAGE value="Added isListOfSenatorsOfGivenState method." />
@@ -585,6 +582,7 @@
     <MESSAGE value="Removed unnecessary imports." />
     <MESSAGE value="Implemented filterByParty and passed all test cases." />
     <MESSAGE value="Implemented filterByBirthYearFloor and passed all test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented filterByBirthYearFloor and passed all test cases." />
+    <MESSAGE value="Implemented filterBySenateClass and passed all test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented filterBySenateClass and passed all test cases." />
   </component>
 </project>
