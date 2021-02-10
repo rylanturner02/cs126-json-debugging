@@ -51,32 +51,15 @@ public class SenateAnalysis {
     }
 
     public String mostFrequentClass() {
-        int classIFrequency = 0, classIIFrequency = 0, classIIIFrequency = 0;
+        HashMap<String, Integer> classFrequency = new HashMap<>();
 
         for (Senator senator : senateData.getSenators()) {
-            switch (senator.getSenatorClass()) {
-                case "class1":
-                    classIFrequency++;
-                    break;
-                case "class2":
-                    classIIFrequency++;
-                    break;
-                case "class3":
-                    classIIIFrequency++;
-                    break;
-                default:
-                    throw new IllegalArgumentException();
-            }
+            classFrequency.put(senator.getSenatorClass(),
+                    classFrequency.getOrDefault(senator.getSenatorClass(), 0) + 1);
         }
 
-        if (classIFrequency > classIIFrequency && classIFrequency > classIIIFrequency) {
-            return "Class I";
-        } else if (classIIFrequency > classIFrequency && classIIFrequency > classIIIFrequency) {
-            return "Class II";
-        } else if (classIIIFrequency > classIFrequency && classIIIFrequency > classIIFrequency) {
-            return "Class III";
-        } else {
-            return "No most frequent class.";
-        }
+        // code below cited from:
+        // https://stackoverflow.com/questions/5911174/finding-key-associated-with-max-value-in-a-java-map
+        return Collections.max(classFrequency.entrySet(), HashMap.Entry.comparingByValue()).getKey();
     }
 }

@@ -58,7 +58,29 @@ public class SenateFiltering {
     }
 
     public List<Senator> filterBySenateClass(String senateClass) {
-        return senateData.getSenators();
+        int MINIMUM_STRING_LENGTH = 6;
+        ArrayList<String> validClasses = new ArrayList<>();
+        validClasses.add("class1");
+        validClasses.add("class2");
+        validClasses.add("class3");
+
+        if (senateClass == null || !(validClasses.contains(senateClass))) {
+            throw new IllegalArgumentException();
+        }
+
+        ArrayList<Senator> classFilteredSenators = new ArrayList<>();
+
+        for (Senator senator : senateData.getSenators()) {
+            if (senator.getSenatorClass().equals(senateClass)) {
+                classFilteredSenators.add(senator);
+            }
+        }
+
+        if (classFilteredSenators.size() > 0) {
+            return classFilteredSenators;
+        }
+
+        return null;
     }
 
     public List<Senator> filterByState(String stateInitials) {

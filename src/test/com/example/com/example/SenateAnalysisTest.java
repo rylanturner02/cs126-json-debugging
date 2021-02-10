@@ -31,7 +31,7 @@ public class SenateAnalysisTest {
      */
     @Test
     public void testAnalysisForCorrectMostFrequentClass() {
-        assertEquals("Class III", senateAnalysis.mostFrequentClass());
+        assertEquals("class3", senateAnalysis.mostFrequentClass());
     }
 
     /**

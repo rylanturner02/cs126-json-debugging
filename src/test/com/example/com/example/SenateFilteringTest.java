@@ -136,8 +136,8 @@ public class SenateFilteringTest {
     public void testFilteringForValidClassPass() {
         boolean isListOfSenatorsOfGivenClass = true;
 
-        for (Senator senator : senateFilter.filterBySenateClass("Class I")) {
-            if (!(senator.getSenatorClass().equals("Class I"))) {
+        for (Senator senator : senateFilter.filterBySenateClass("class1")) {
+            if (!(senator.getSenatorClass().equals("class1"))) {
                 isListOfSenatorsOfGivenClass = false;
                 break;
             }
@@ -148,17 +148,17 @@ public class SenateFilteringTest {
 
     @Test
     public void testFilteringForInvalidClassPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass("Class IV"));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterBySenateClass("class4"));
     }
 
     @Test
     public void testFilteringForEmptyStringPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass(""));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterBySenateClass(""));
     }
 
     @Test
     public void testFilteringForNullPass() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass(null));
+        assertThrows(IllegalArgumentException.class, () -> senateFilter.filterBySenateClass(null));
     }
 
     /*
