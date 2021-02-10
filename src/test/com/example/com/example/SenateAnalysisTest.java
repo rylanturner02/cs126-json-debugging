@@ -45,21 +45,11 @@ public class SenateAnalysisTest {
     }
 
     /**
-     * Test case examines accuracy of list produced by sortedNamesByBirthDate method in SenateAnalysis.
+     * Test case examines accuracy of list produced by mostFrequentParty method in SenateAnalysis.
      */
     @Test
-    public void testAnalysisForCorrectSortedListByBirthDate() {
-        List<Senator> sortedList = senateAnalysis.sortedNamesByBirthDate();
-        boolean isOrderedByBirthDate = true;
-
-        for (int i = 0; i < sortedList.size() - 1; i ++) {
-            if (sortedList.get(i) != sortedList.get(i + 1)) {
-                isOrderedByBirthDate = false;
-                break;
-            }
-        }
-
-        assertTrue(isOrderedByBirthDate);
+    public void testAnalysisForCorrectMostFrequentParty() {
+        assertEquals("Republican", senateAnalysis.mostFrequentParty());
     }
 
     /**

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Added filterByParty method in SenateFiltering.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateFiltering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateFilteringTest.java" afterDir="false" />
+    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Implemented Comparator into SenateData.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1o1MWrYLQpYGG0yj7STguOfb6uX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -49,20 +58,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Main" />
-      <module name="JSON" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -86,13 +82,101 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="METHOD_NAME" value="testAnalysisForCorrectAverageBirthYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="METHOD_NAME" value="testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="METHOD_NAME" value="testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="METHOD_NAME" value="testAnalysisForCorrectMostFrequentParty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenateAnalysisTest.testAnalysisForCorrectSortedListByBirthDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
+      <option name="METHOD_NAME" value="testAnalysisForCorrectSortedListByBirthDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.JUnit" />
+      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" />
+      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" />
+      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" />
+      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectSortedListByBirthDate" />
+      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty" />
+        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectSortedListByBirthDate" />
+        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" />
+        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" />
+        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" />
       </list>
     </recent_temporary>
   </component>
@@ -110,42 +194,7 @@
       <workItem from="1612654133389" duration="12839000" />
       <workItem from="1612719684641" duration="305000" />
       <workItem from="1612724703358" duration="1316000" />
-      <workItem from="1612799320180" duration="10739000" />
-    </task>
-    <task id="LOCAL-00001" summary="Created ChicagoCrimeData file and initialized JSON.">
-      <created>1612642297108</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1612642297108</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added parameters to ChicagoCrimeData">
-      <created>1612643698014</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1612643698014</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Created ChicagoCrimeData constructor.">
-      <created>1612644008096</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1612644008096</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added getters for all instance variables in CrimeInfo.">
-      <created>1612647217915</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1612647217915</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Created wrapper class ChicagoCrimeIndex for CrimeInfo.">
-      <created>1612647299368</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1612647299368</updated>
+      <workItem from="1612799320180" duration="34171000" />
     </task>
     <task id="LOCAL-00006" summary="Added constructor and getCrime method to ChicagoCrimeIndex.">
       <created>1612647705594</created>
@@ -287,7 +336,210 @@
       <option name="project" value="LOCAL" />
       <updated>1612890287422</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Altered assertEquals in SenateFilteringTest.java tests.">
+      <created>1612893248309</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612893248309</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Changed assertEquals to assertTrue in SenateFilteringTest.java.">
+      <created>1612893288537</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612893288537</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Changed isListOfGivenParty method to isListOfSenatorsOfGivenParty.">
+      <created>1612893568370</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612893568370</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Moved around parameters for isListOfSenatorsOfGivenParty method.">
+      <created>1612893883191</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612893883191</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Wrote tests for filterByBirthYear method in SenateFiltering.">
+      <created>1612895223954</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612895223954</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added return statements in SenateFiltering to avoid errors during testing.">
+      <created>1612895339291</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612895339291</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Fixed test cases for filterByBirthYearFloor method.">
+      <created>1612895666301</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1612895666301</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Began all SenateFiltering methods for future testing.">
+      <created>1612895934678</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1612895934678</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added minor alterations to test cases in SenateFilteringTest.">
+      <created>1612897360366</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1612897360366</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Wrote testFilteringForValidStartDateFloor test method.">
+      <created>1612897738068</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1612897738068</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Wrote all test cases for filterByStartYearFloor method in SenateFiltering.">
+      <created>1612897854161</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1612897854161</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added edge test case for filterByStartYearFloor method in SenateFiltering.">
+      <created>1612898008711</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1612898008711</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added isListOfSenatorsOfGivenState method.">
+      <created>1612898330944</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1612898330944</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added all test cases for filterByState method in SenateFiltering.">
+      <created>1612898592762</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1612898592762</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added constructor with parameter in SenateAnalysis.">
+      <created>1612898729722</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1612898729722</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Initialized all analysis functions in SenateAnalysis.">
+      <created>1612899299383</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1612899299383</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added test cases for mostFrequentPartyByRank method.">
+      <created>1612903056159</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1612903056159</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Removed ArrayList import from SenateAnalysis.java.">
+      <created>1612903110968</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1612903110968</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fixed averageBirthYear test case to refer to averageBirthYear method.">
+      <created>1612903176654</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1612903176654</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Changed testAnalysisForCorrectSortedListByStartDate to BirthDate.">
+      <created>1612904991672</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1612904991672</updated>
+    </task>
+    <task id="LOCAL-00046" summary="More changes for testAnalysisForCorrectSortedListByBirthDate method.">
+      <created>1612905107062</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1612905107062</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Changed startDate variable to senatorClass cause I read the JSON wrong oops.">
+      <created>1612905776340</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1612905776340</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added minor fixes to mostFrequentClass() method and passed test case.">
+      <created>1612908364243</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1612908364243</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Changed filterByStartDate to filterBySenateClass in SenateFiltering.">
+      <created>1612915607998</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1612915607998</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Removed startYear test cases in favor of String-checking senateClass test cases.">
+      <created>1612916306863</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1612916306863</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Completed averageBirthYear method that complied with test case.">
+      <created>1612916567865</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1612916567865</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Implemented Comparable in Senator.java and added helper function.">
+      <created>1612918158286</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1612918158286</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Finished mostFrequentPartyByRank method in SenateAnalysis.java.">
+      <created>1612919986459</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1612919986459</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Implemented Comparator into SenateData.">
+      <created>1612920949467</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1612920949467</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,31 +559,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added parameters to ChicagoCrimeData" />
-    <MESSAGE value="Created ChicagoCrimeData constructor." />
-    <MESSAGE value="Added getters for all instance variables in CrimeInfo." />
-    <MESSAGE value="Created wrapper class ChicagoCrimeIndex for CrimeInfo." />
-    <MESSAGE value="Added constructor and getCrime method to ChicagoCrimeIndex." />
-    <MESSAGE value="Created SenateData.java and Senator.java." />
-    <MESSAGE value="Added constructor and getSenators method to SenateData." />
-    <MESSAGE value="Added constructors and getters to Senator.java." />
-    <MESSAGE value="Changed getSenators to getSenator." />
-    <MESSAGE value="Imported senators.json for development purposes." />
-    <MESSAGE value="Added serialized name for startdate." />
-    <MESSAGE value="Added TypeToken reading to Main class." />
-    <MESSAGE value="Added class for nested Person object in objects array of senators.json." />
-    <MESSAGE value="Initialized and added getter for list of personal info." />
-    <MESSAGE value="Changed PersonalInfo storage from List to PersonalInfo object." />
-    <MESSAGE value="Added @SerializedName for PersonalInfo functionality." />
-    <MESSAGE value="Removed Meta.java now that testing purposes are passed." />
-    <MESSAGE value="Removed unused imports and finalized instance variables." />
-    <MESSAGE value="Refactored SenateInfoTest.java." />
-    <MESSAGE value="Added GSON object to SenateInfoTest.java" />
-    <MESSAGE value="Created SenateAnalysis.java and SenateFiltering.java." />
-    <MESSAGE value="Added test names with general functionality for SenateFilteringTest.java." />
-    <MESSAGE value="Added test names with general functionality for SenateAnalysisTest.java." />
-    <MESSAGE value="Wrote tests and corresponding Javadoc for filterByParty method in SenateFiltering." />
-    <MESSAGE value="Added filterByParty method in SenateFiltering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added filterByParty method in SenateFiltering." />
+    <MESSAGE value="Wrote tests for filterByBirthYear method in SenateFiltering." />
+    <MESSAGE value="Added return statements in SenateFiltering to avoid errors during testing." />
+    <MESSAGE value="Fixed test cases for filterByBirthYearFloor method." />
+    <MESSAGE value="Began all SenateFiltering methods for future testing." />
+    <MESSAGE value="Added minor alterations to test cases in SenateFilteringTest." />
+    <MESSAGE value="Wrote testFilteringForValidStartDateFloor test method." />
+    <MESSAGE value="Wrote all test cases for filterByStartYearFloor method in SenateFiltering." />
+    <MESSAGE value="Added edge test case for filterByStartYearFloor method in SenateFiltering." />
+    <MESSAGE value="Added isListOfSenatorsOfGivenState method." />
+    <MESSAGE value="Added all test cases for filterByState method in SenateFiltering." />
+    <MESSAGE value="Added constructor with parameter in SenateAnalysis." />
+    <MESSAGE value="Initialized all analysis functions in SenateAnalysis." />
+    <MESSAGE value="Added test cases for mostFrequentPartyByRank method." />
+    <MESSAGE value="Removed ArrayList import from SenateAnalysis.java." />
+    <MESSAGE value="Fixed averageBirthYear test case to refer to averageBirthYear method." />
+    <MESSAGE value="Changed testAnalysisForCorrectSortedListByStartDate to BirthDate." />
+    <MESSAGE value="More changes for testAnalysisForCorrectSortedListByBirthDate method." />
+    <MESSAGE value="Changed startDate variable to senatorClass cause I read the JSON wrong oops." />
+    <MESSAGE value="Added minor fixes to mostFrequentClass() method and passed test case." />
+    <MESSAGE value="Changed filterByStartDate to filterBySenateClass in SenateFiltering." />
+    <MESSAGE value="Removed startYear test cases in favor of String-checking senateClass test cases." />
+    <MESSAGE value="Completed averageBirthYear method that complied with test case." />
+    <MESSAGE value="Implemented Comparable in Senator.java and added helper function." />
+    <MESSAGE value="Finished mostFrequentPartyByRank method in SenateAnalysis.java." />
+    <MESSAGE value="Implemented Comparator into SenateData." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Comparator into SenateData." />
   </component>
 </project>

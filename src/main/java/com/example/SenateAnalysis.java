@@ -1,7 +1,7 @@
 package com.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.HashMap;
 
 public class SenateAnalysis {
     private SenateData senateData;
@@ -22,9 +22,17 @@ public class SenateAnalysis {
         return totalSumOfBirthYears / senateData.getSenators().size();
     }
 
-    public List<Senator> sortedNamesByBirthDate() {
-        // work on it later
-        return senateData.getSenators();
+    public String mostFrequentParty() {
+        HashMap<String, Integer> partiesBySenator = new HashMap<>();
+
+        for (Senator senator : senateData.getSenators()) {
+            partiesBySenator.put(senator.getParty(),
+                    partiesBySenator.getOrDefault(senator.getParty(), 0) + 1);
+        }
+
+        // code below cited from:
+        // https://stackoverflow.com/questions/5911174/finding-key-associated-with-max-value-in-a-java-map
+        return Collections.max(partiesBySenator.entrySet(), HashMap.Entry.comparingByValue()).getKey();
     }
 
     public String mostFrequentPartyByRank(String rank) {
