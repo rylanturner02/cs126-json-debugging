@@ -11,7 +11,14 @@ public class SenateAnalysis {
     }
 
     public int averageBirthYear() {
-        return 1960;
+        int totalSumOfBirthYears = 0;
+
+        for (Senator senator : senateData.getSenators()) {
+            totalSumOfBirthYears += Integer.parseInt(senator.getPersonalInfo().getBirthday()
+                    .substring(0, END_OF_YEAR_SUBSTRING));
+        }
+
+        return totalSumOfBirthYears / senateData.getSenators().size();
     }
 
     public List<Senator> sortedNamesByBirthDate() {
