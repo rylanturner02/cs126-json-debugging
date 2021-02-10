@@ -23,48 +23,31 @@ public class SenateAnalysis {
     }
 
     public String mostFrequentParty() {
-        HashMap<String, Integer> partiesBySenator = new HashMap<>();
+        HashMap<String, Integer> partyFrequency = new HashMap<>();
 
         for (Senator senator : senateData.getSenators()) {
-            partiesBySenator.put(senator.getParty(),
-                    partiesBySenator.getOrDefault(senator.getParty(), 0) + 1);
+            partyFrequency.put(senator.getParty(),
+                    partyFrequency.getOrDefault(senator.getParty(), 0) + 1);
         }
 
         // code below cited from:
         // https://stackoverflow.com/questions/5911174/finding-key-associated-with-max-value-in-a-java-map
-        return Collections.max(partiesBySenator.entrySet(), HashMap.Entry.comparingByValue()).getKey();
+        return Collections.max(partyFrequency.entrySet(), HashMap.Entry.comparingByValue()).getKey();
     }
 
     public String mostFrequentPartyByRank(String rank) {
-        int democratCount = 0, republicanCount = 0, independentCount = 0;
+        HashMap<String, Integer> partyFrequencyByRank = new HashMap<>();
 
         for (Senator senator : senateData.getSenators()) {
             if (senator.getSenatorRank().equals(rank)) {
-                switch (senator.getParty()) {
-                    case "Democrat":
-                        democratCount++;
-                        break;
-                    case "Republican":
-                        republicanCount++;
-                        break;
-                    case "Independent":
-                        independentCount++;
-                        break;
-                    default:
-                        throw new IllegalArgumentException();
-                }
+                partyFrequencyByRank.put(senator.getParty(),
+                        partyFrequencyByRank.getOrDefault(senator.getParty(), 0) + 1);
             }
         }
 
-        if (democratCount > republicanCount && democratCount > independentCount) {
-            return "Democrat";
-        } else if (republicanCount > democratCount && republicanCount > independentCount) {
-            return "Republican";
-        } else if (independentCount > democratCount && independentCount > republicanCount) {
-            return "Independent";
-        } else {
-            return "No most frequent party for rank: " + rank;
-        }
+        // code below cited from:
+        // https://stackoverflow.com/questions/5911174/finding-key-associated-with-max-value-in-a-java-map
+        return Collections.max(partyFrequencyByRank.entrySet(), HashMap.Entry.comparingByValue()).getKey();
     }
 
     public String mostFrequentClass() {

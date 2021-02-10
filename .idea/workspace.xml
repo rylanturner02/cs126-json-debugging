@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Implemented Comparator into SenateData.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8c2cd232-c6e0-4282-922d-412312fa1055" name="Default Changelist" comment="Completed mostFrequentParty function and passed corresponding test cases.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SenateAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/example/com/example/SenateAnalysisTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty">
+  <component name="RunManager" selected="JUnit.SenateAnalysisTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -82,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenateAnalysisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JSON" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +90,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.SenateAnalysisTest" />
-      <option name="METHOD_NAME" value="testAnalysisForCorrectAverageBirthYear" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,19 +161,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.JUnit" />
-      <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" />
       <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" />
       <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" />
       <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectSortedListByBirthDate" />
       <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty" />
+      <item itemvalue="JUnit.SenateAnalysisTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SenateAnalysisTest" />
         <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectMostFrequentParty" />
         <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectSortedListByBirthDate" />
         <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenSeniorRank" />
         <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectHighestFrequencyPartyGivenJuniorRank" />
-        <item itemvalue="JUnit.SenateAnalysisTest.testAnalysisForCorrectAverageBirthYear" />
       </list>
     </recent_temporary>
   </component>
@@ -194,14 +191,7 @@
       <workItem from="1612654133389" duration="12839000" />
       <workItem from="1612719684641" duration="305000" />
       <workItem from="1612724703358" duration="1316000" />
-      <workItem from="1612799320180" duration="34171000" />
-    </task>
-    <task id="LOCAL-00006" summary="Added constructor and getCrime method to ChicagoCrimeIndex.">
-      <created>1612647705594</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1612647705594</updated>
+      <workItem from="1612799320180" duration="34655000" />
     </task>
     <task id="LOCAL-00007" summary="Created SenateData.java and Senator.java.">
       <created>1612655130951</created>
@@ -539,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612920949467</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Completed mostFrequentParty function and passed corresponding test cases.">
+      <created>1612926370226</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1612926370226</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +556,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Wrote tests for filterByBirthYear method in SenateFiltering." />
     <MESSAGE value="Added return statements in SenateFiltering to avoid errors during testing." />
     <MESSAGE value="Fixed test cases for filterByBirthYearFloor method." />
     <MESSAGE value="Began all SenateFiltering methods for future testing." />
@@ -584,6 +580,7 @@
     <MESSAGE value="Implemented Comparable in Senator.java and added helper function." />
     <MESSAGE value="Finished mostFrequentPartyByRank method in SenateAnalysis.java." />
     <MESSAGE value="Implemented Comparator into SenateData." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Comparator into SenateData." />
+    <MESSAGE value="Completed mostFrequentParty function and passed corresponding test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed mostFrequentParty function and passed corresponding test cases." />
   </component>
 </project>
