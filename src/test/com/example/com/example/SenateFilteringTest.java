@@ -127,49 +127,40 @@ public class SenateFilteringTest {
     }
 
     /*
-     * The following section of tests evaluate the filterByStartYearFloor method in SenateFiltering.java.
-     * 1. If a valid party name is passed, the returned List is checked for only containing senators who
-     * started their congressional term on or before the passed year.
-     * 2. Any invalid start year passed should return an IllegalArgumentException.
+     * The following section of tests evaluate the filterBySenateClass method in SenateFiltering.java.
+     * 1. If a valid class is passed, the returned List is checked for only containing senators who
+     * belong to the given class (I, II, or III).
+     * 2. Any invalid class passed should return an IllegalArgumentException.
      */
 
     @Test
-    public void testFilteringForValidStartDateFloor() {
-        boolean isListWithSenatorsStartingOnOrAfterStartYear = true;
+    public void testFilteringForValidClassPass() {
+        boolean isListOfSenatorsOfGivenClass = true;
 
-        // Checks for at least one instance of senator in list who started their term before the given year.
-        for (Senator senator : senateFilter.filterByStartYearFloor(2000)) {
-            if (Integer.parseInt(senator.getSenatorClass().substring(0, END_OF_YEAR_SUBSTRING)) < 2000) {
-                isListWithSenatorsStartingOnOrAfterStartYear = false;
+        for (Senator senator : senateFilter.filterBySenateClass("Class I")) {
+            if (!(senator.getSenatorClass().equals("Class I"))) {
+                isListOfSenatorsOfGivenClass = false;
                 break;
             }
         }
 
-        assertTrue(isListWithSenatorsStartingOnOrAfterStartYear);
+        assertTrue(isListOfSenatorsOfGivenClass);
     }
 
     @Test
-    public void testFilteringForSenatorStaringAtStartYearFloor() {
-        boolean isListWithSenatorStartingAtStartYearFloor = false;
-
-        // Checks for presence of Sen. Jon Ossoff, who started his term in 2021.
-        for (Senator senator : senateFilter.filterByStartYearFloor(2021)) {
-            if (senator.getPersonalInfo().getName().equals("Sen. Jon Ossoff [D-GA]")) {
-                isListWithSenatorStartingAtStartYearFloor = true;
-                break;
-            }
-        }
-
-        assertTrue(isListWithSenatorStartingAtStartYearFloor);
+    public void testFilteringForInvalidClassPass() {
+        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass("Class IV"));
     }
 
     @Test
-    public void testFilteringForTooHighStartDateFloor() {
-        assertEquals(new IllegalArgumentException(), senateFilter.filterByStartYearFloor(3000));
+    public void testFilteringForEmptyStringPass() {
+        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass(""));
     }
 
     @Test
-    public void
+    public void testFilteringForNullPass() {
+        assertEquals(new IllegalArgumentException(), senateFilter.filterBySenateClass(null));
+    }
 
     /*
      * The following section of tests evaluate the filterByState method in SenateFiltering.java.
