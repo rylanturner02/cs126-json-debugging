@@ -23,17 +23,40 @@ public class SenateAnalysis {
     }
 
     public List<Senator> sortedNamesByBirthDate() {
-        ArrayList<Senator> listOfBirthdays = new ArrayList<>();
-
-        for (Senator senator : senateData.getSenators()) {
-            listOfBirthdays.add(senator.getPersonalInfo().getBirthday());
-        }
-
-        return listOfBirthdays.sort(null);
+        // work on it later
+        return senateData.getSenators();
     }
 
     public String mostFrequentPartyByRank(String rank) {
-        return "Democrat";
+        int democratCount = 0, republicanCount = 0, independentCount = 0;
+
+        for (Senator senator : senateData.getSenators()) {
+            if (senator.getSenatorRank().equals(rank)) {
+                switch (senator.getParty()) {
+                    case "Democrat":
+                        democratCount++;
+                        break;
+                    case "Republican":
+                        republicanCount++;
+                        break;
+                    case "Independent":
+                        independentCount++;
+                        break;
+                    default:
+                        throw new IllegalArgumentException();
+                }
+            }
+        }
+
+        if (democratCount > republicanCount && democratCount > independentCount) {
+            return "Democrat";
+        } else if (republicanCount > democratCount && republicanCount > independentCount) {
+            return "Republican";
+        } else if (independentCount > democratCount && independentCount > republicanCount) {
+            return "Independent";
+        } else {
+            return "No most frequent party for rank: " + rank;
+        }
     }
 
     public String mostFrequentClass() {
